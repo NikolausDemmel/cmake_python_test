@@ -9,9 +9,9 @@ CMAKE_RELEASED_MODULES=~/work/CMake/Modules
 CMAKE_CUSTOM_MODULES="$(shell pwd)/modules;$(CMAKE_RELEASED_MODULES)"
 
 
-all: test test-interp test-2.7 test-2.7-interp test-2.6 test-2.6-interp test-3.3 test-3.3-interp
+all: test test-interp test-2.7 test-2.7-interp test-2.6 test-2.6-interp test-3 test-3-interp
 
-.PHONY: all test test-interp test-2.5 test-2.5-interp test-2.6 test-2.6-interp test-2.7 test-2.7-interp test-3.3 test-3.3-interp
+.PHONY: all test test-interp test-2.5 test-2.5-interp test-2.6 test-2.6-interp test-2.7 test-2.7-interp test-3 test-3-interp
 
 test:
 	rm -rf $@
@@ -53,12 +53,12 @@ test-2.7-interp:
 	mkdir $@
 	cd $@ && cmake .. -DVERSION=2.7 -DFIND_INTERP=YES -DCMAKE_MODULE_PATH=$(CMAKE_CUSTOM_MODULES)
 
-test-3.3:
+test-3:
 	rm -rf $@
 	mkdir $@
-	cd $@ && cmake .. -DVERSION=3.3 -DFIND_INTERP=NO -DCMAKE_MODULE_PATH=$(CMAKE_CUSTOM_MODULES)
+	cd $@ && cmake .. -DVERSION=3 -DFIND_INTERP=NO -DCMAKE_MODULE_PATH=$(CMAKE_CUSTOM_MODULES)
 
-test-3.3-interp:
+test-3-interp:
 	rm -rf $@
 	mkdir $@
-	cd $@ && cmake .. -DVERSION=3.3 -DFIND_INTERP=YES -DCMAKE_MODULE_PATH=$(CMAKE_CUSTOM_MODULES)
+	cd $@ && cmake .. -DVERSION=3 -DFIND_INTERP=YES -DCMAKE_MODULE_PATH=$(CMAKE_CUSTOM_MODULES)

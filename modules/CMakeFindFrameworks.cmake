@@ -24,6 +24,7 @@ if(NOT CMAKE_FIND_FRAMEWORKS_INCLUDED)
     if(APPLE)
       foreach(dir
           ~/Library/Frameworks/${fwk}.framework
+#          /usr/local/Frameworks/${fwk}.framework
           /Library/Frameworks/${fwk}.framework
           /System/Library/Frameworks/${fwk}.framework
           /Network/Library/Frameworks/${fwk}.framework)

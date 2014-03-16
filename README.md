@@ -3,6 +3,10 @@ cmake_python_test
 
 Testing cmake FindPythonLibs modules
 
+This was put together in response to the discussion of issue at https://github.com/Homebrew/homebrew/issues/25118
+
+The proof of concept implementation is based on https://github.com/qgis/QGIS/blob/master/cmake/FindPythonLibrary.cmake, so all credit to them.
+
 ### 1. Download
 
     git clone https://github.com/NikolausDemmel/cmake_python_test.git

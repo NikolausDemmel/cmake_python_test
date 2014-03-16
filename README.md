@@ -14,10 +14,14 @@ Testing cmake FindPythonLibs modules
     # 2. run the makefile
     make
     # 3. observe output
+
+My output (cropped) is: https://gist.github.com/NikolausDemmel/9392464#file-findpythonlibs-2-8-12-1
     
-### 3. Run with proof of concept
+### 3. Run with proof of concept using sysconfig
 
     # 1. manually edit Makefile, comment the line after "# option 1: ...", and uncomment the line after "# option 2: ..."
     # 2. run the makefile
     make
     # 3. observe output
+    
+My output (cropped) is: https://gist.github.com/NikolausDemmel/9392464#file-findpythonlibs-sysconfig
